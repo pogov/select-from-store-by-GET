@@ -6,3 +6,38 @@
 body {
   text-align: center;
 }
+
+.button{
+  width: 25vw;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 15px auto;
+}
+
+.link{
+  width: 25vw;
+  display: block;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 15px auto;
+}
+.home{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item{
+  width: 50vw;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px auto;
+}

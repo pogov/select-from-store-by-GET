@@ -1,21 +1,10 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Context from "../store/store";
+import "../App.css";
 
 const ItemComponent = ({ item, i }) => (
-  <Link
-    to={`/items/${i + 1}`}
-    style={{
-      display: "block",
-      textDecoration: "none",
-      color: "black",
-      width: "50vw",
-      border: "1px solid black",
-      borderRadius: "10px",
-      padding: "10px",
-      margin: "5px auto",
-    }}
-    key={item.name}>
+  <Link to={`/items/${i + 1}`} className="link" key={item.name}>
     <p>Name: {item.name}</p>
     <p>Email: {item.email}</p>
   </Link>
@@ -26,15 +15,15 @@ const ItemsListView = () => {
   if (!store) return null;
   return (
     <>
+      <div style={{ margin: "15px" }}>
+        <Link to="/" className="button">
+          Home
+        </Link>
+      </div>
       <div>Items list</div>
       {store.map((item, i) => (
         <ItemComponent item={item} i={i} key={item.name} />
       ))}
-      <div>
-        <Link style={{ color: "black", textDecoration: "none" }} to="/">
-          Home
-        </Link>
-      </div>
     </>
   );
 };
